@@ -1,5 +1,5 @@
 import React from 'react';
-import confLogo from '../images/logo_academiageek.png';
+import ProfileHeader from '../containers/ProfileHeaderComponent';
 
 //importar los css
 import './styles/ProfileStyle.css'
@@ -11,10 +11,7 @@ class Profile extends React.Component{
         return(
             //Contenedor de mi card
             <div className="Profile">
-                 {/*Encabezado de perfil*/}
-                <div className="Profile__header">
-                    <img className="Profile__logo"src={confLogo} alt="logo AcademiaGeek"></img>
-                </div>
+                    {<ProfileHeader/>}
                 {/*Nombre de Usuario y Avatar*/}
                 <div className="Profile__section-name">
                     <img className="Profile__avatar" src="https://eafitrequisitos.s3.us-east-2.amazonaws.com/john.png" alt="avatar del usuario"></img>
