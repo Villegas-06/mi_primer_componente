@@ -1,2 +1,2 @@
-# mi_primer_componente
-Creando componentes en React, perfiles de conferencia.
+# mi-primer-componente
+Perfiles para programas de vídeo llamadas.

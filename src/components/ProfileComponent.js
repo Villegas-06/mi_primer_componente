@@ -1,34 +1,36 @@
 import React from 'react';
-import ProfileHeader from '../containers/ProfileHeaderComponent';
+import logoGeek from '../images/logo-ag-min.png';
+import '../styles/ProfileStyle.css'
 
-//importar los css
-import './styles/ProfileStyle.css'
-
-//clases, empiezan letras en mayúscula (camelCase)
-class Profile extends React.Component{
-
+class Profile extends React.Component {
     render(){
+         const {
+             firstName,
+             lastName,
+             avatarUrl,
+             jobTitle,
+             twitter
+         } = this.props;
+        
         return(
-            //Contenedor de mi card
             <div className="Profile">
-                    {<ProfileHeader/>}
-                {/*Nombre de Usuario y Avatar*/}
-                <div className="Profile__section-name">
-                    <img className="Profile__avatar" src="https://eafitrequisitos.s3.us-east-2.amazonaws.com/john.png" alt="avatar del usuario"></img>
-                    <h1>Miguel Angel <br /> Montoya Villegas</h1>
+                <div className="Profile__header">
+                    <img className="Profile__logo" src={logoGeek} alt="Logo Academia Geek" />
                 </div>
-                {/*Información personal del Usuario*/}
+                <div className="Profile__section-name">
+                    <img className="Profile__avatar" src={avatarUrl} alt="Avatar" />
+                    <h1>{firstName} <br/> {lastName} </h1>
+                </div>
                 <div className="Profile__section-info">
-                    <h2>FrontEnd Developer</h2>
-                    <div>@Villegas4006</div>
+                    <h3>{jobTitle}</h3>
+                    <span> @{twitter} </span>
                 </div>
                 <div className="Profile__footer">
-                    #geekconf
+                    <p>#GeekConf</p>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-//exportar el JS
 export default Profile;
